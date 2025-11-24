@@ -10,6 +10,14 @@ people.forEach((person, index) => {
   }
 });
 
+people.forEach((person, index) => {
+  console.groupCollapsed(`${person.name}`);
+  console.log(person.country);
+  console.log(person.cool);
+  console.log(`Done!`);
+  console.groupEnd(`${person.name}`);
+});
+
 console.table(people);
 
 // Console Methods
@@ -29,10 +37,11 @@ console.table(people);
 // Some Setup Code
 
 function doStuff() {
-  console.group(`Doing some stuff`);
+  console.group(`Doing stuff`);
   console.log(`Hello I'm Val`);
   console.warn(`Do not transmit sensitive information via unsecured communications!`);
   console.error(`Incorrect encryption key entered.`);
+  console.groupEnd(`Doing stuff`);
 }
 
 function doctorize(name) {

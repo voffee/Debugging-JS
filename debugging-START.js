@@ -5,8 +5,12 @@ const people = [
 ];
 
 people.forEach((person, index) => {
-  console.log(person.name);
+  if(person.name === `Snickers`) {
+    console.warn(`Dumb Name`);
+  }
 });
+
+console.table(people);
 
 // Console Methods
 
@@ -24,7 +28,15 @@ people.forEach((person, index) => {
 
 // Some Setup Code
 
+function doStuff() {
+  console.group(`Doing some stuff`);
+  console.log(`Hello I'm Val`);
+  console.warn(`Do not transmit sensitive information via unsecured communications!`);
+  console.error(`Incorrect encryption key entered.`);
+}
+
 function doctorize(name) {
+  console.count(`running Doctorize`);
   return `Dr. ${name}`;
 }
 
